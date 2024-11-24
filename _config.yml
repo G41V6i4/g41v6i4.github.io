@@ -48,8 +48,8 @@ G41V6!4:
 
 # Add links to the sidebar.
 menu:
-  - title:             Pwnable
-    url:               /pwn/
+  - title:             Study
+    url:               /study/
   - title:             Documentation
     url:               /docs/
   - title:             About
