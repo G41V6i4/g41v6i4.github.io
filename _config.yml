@@ -49,7 +49,7 @@ G41V6!4:
 # Add links to the sidebar.
 menu:
   - title: Pwnable
-    url: /pwnable/
+    url: /pwn/
     submenu:
       - title:             Study
         url:               /study/
