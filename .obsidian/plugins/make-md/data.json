@@ -49,7 +49,9 @@
     "//example",
     "//example/example/_posts",
     "//pwnable/pwnable/_posts",
-    "//pwnable"
+    "//pwnable",
+    "//assets",
+    "//assets/assets/js"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
