@@ -53,7 +53,7 @@ menu:
     submenu:
       - title: Heap
       - url: /heap/
-      - title: wargame
+      - title: Wargame
       - url: /wargame/
   - title:             Documentation
     url:               /docs/
