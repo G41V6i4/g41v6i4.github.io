@@ -55,6 +55,8 @@ menu:
         url: /study/
       - title: Wargame
         url: /wargame/
+  - title: Blog
+    url : /blog/
   - title:             Documentation
     url:               /docs/
   - title:             About
