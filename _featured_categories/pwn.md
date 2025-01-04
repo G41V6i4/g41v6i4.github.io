@@ -1,7 +1,7 @@
 ---
 layout: list
 title: Pwnable
-slug: pwnable
+slug: pwn
 menu: true
 order: 3
 description: Pwn
