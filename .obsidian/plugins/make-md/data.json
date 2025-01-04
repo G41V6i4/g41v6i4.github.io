@@ -48,8 +48,8 @@
     "/",
     "//example",
     "//example/example/_posts",
-    "//pwnable",
-    "//pwnable/pwnable/_posts"
+    "//pwnable/pwnable/_posts",
+    "//pwnable"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
