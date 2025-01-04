@@ -20,3 +20,16 @@ description: >
 # DON'T USE THIS SETTING IN YOUR CATEGORIES!
 sitemap: false
 ---
+layout: post
+
+title: "[glibc2.29]_int_malloc"
+
+description: Analysis _int_malloc in glibc2.29
+
+categories: [study,heap]
+
+tag: [heap]
+
+sitemap: false
+
+hide_last_modified: true

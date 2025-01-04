@@ -11,10 +11,14 @@
             "id": "96ea24d0592a2794",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "_featured_categories/pwn.md",
+                "mode": "source",
+                "source": true
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "pwn"
             }
           }
         ]
@@ -182,8 +186,16 @@
   },
   "active": "96ea24d0592a2794",
   "lastOpenFiles": [
-    "_posts/pwnable/study/wargame/2024-06-21-Pwnable-glibc.md",
-    "_posts/pwnable/study/wargame",
+    "_featured_categories/Heap.md",
+    "_featured_categories/pwn.md",
+    "_featured_categories/study.md",
+    "_featured_categories/about.md",
+    "_posts/pwnable/study/study.md",
+    "posts.md",
+    "_featured_categories/wargame.md",
+    "CHANGELOG.md",
+    "_posts/pwnable/wargame/2024-06-21-Pwnable-glibc.md",
+    "_posts/pwnable/wargame",
     "_posts/pwnable/study/heap/2024-06-24-Pwnable-glibc.md",
     "_posts/pwnable/study/heap/2024-06-21-Pwnable-glibc.md",
     "_posts/pwnable/study/heap",
@@ -199,8 +211,6 @@
     "pwnable/_posts/study/heap/2024-06-21-Pwnable-glibc.md",
     "pwnable/_posts/study/heap",
     "pwnable/_posts/study",
-    "_featured_categories/wargame.md",
-    "_featured_categories/Heap.md",
     "_includes/body/nav.html",
     "pwnable/_posts/2024-06-21-Pwnable-glibc.md",
     "hydejack/_posts/2019-02-18-improving-site-build-speed.md",
@@ -209,14 +219,8 @@
     "docs/scripts.md",
     "docs/upgrade.md",
     "Template/template.md",
-    "_featured_categories/study.md",
     "404.md",
     "about.md",
-    "NOTICE.md",
-    "posts.md",
-    "docs/deploy.md",
-    "Vault.md",
-    "pwnable/Untitled.md",
-    "example/_posts/2020-07-03-introducing-hydejack-9.md"
+    "NOTICE.md"
   ]
 }

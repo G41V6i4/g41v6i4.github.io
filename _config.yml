@@ -48,13 +48,16 @@ G41V6!4:
 
 # Add links to the sidebar.
 menu:
-  - title:             Study
-    url:               /study/
+  - title: Pwnable
+    url: /pwnable/
     submenu:
-      - title: Heap
-        url: /heap/
-      - title: Wargame
-        url: /wargame/
+      - title:             Study
+        url:               /study/
+        submenu:
+          - title: Heap
+            url: /heap/
+          - title: Wargame
+            url: /wargame/
   - title:             Documentation
     url:               /docs/
   - title:             About

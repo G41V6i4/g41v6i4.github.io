@@ -51,7 +51,12 @@
     "//pwnable/pwnable/_posts",
     "//pwnable",
     "//assets",
-    "//assets/assets/js"
+    "//assets/assets/js",
+    "//_featured_categories",
+    "//Tags",
+    "//_posts",
+    "//_posts/_posts/pwnable",
+    "//_posts/_posts/pwnable/_posts/pwnable/study"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
