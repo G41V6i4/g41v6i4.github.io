@@ -6,7 +6,7 @@ layout: list
 title: Wargame
 
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
-slug: Wargame
+slug: wargame
 menu: true 
 order: 3
 # (Optional) Write a short (~150 characters) description of this featured tag.
