@@ -200,10 +200,21 @@
   },
   "active": "ddae7a6be209dace",
   "lastOpenFiles": [
+    "docs/writing.md",
+    "docs/README.md",
+    "docs/scripts.md",
+    "docs/upgrade.md",
+    "pwnable/_posts/2024-06-24-Pwnable-glibc.md",
+    "Template/template.md",
+    "_featured_categories/study.md",
+    "404.md",
+    "about.md",
+    "NOTICE.md",
+    "posts.md",
+    "docs/deploy.md",
     "hydejack/_posts/2019-02-18-improving-site-build-speed.md",
     "hydejack/_posts",
     "hydejack",
-    "pwnable/_posts/2024-06-24-Pwnable-glibc.md",
     "Vault.md",
     "pwnable/Untitled.md",
     "pwnable/_posts",
@@ -212,9 +223,7 @@
     "example/_posts/2018-06-01-example-content-iii.md",
     "example/_posts/2017-11-23-example-content-ii.md",
     "example/_posts/2024-09-08-x-marks-the-spot-in-hydejack-9-2.md",
-    "Template/template.md",
     "Template",
-    "posts.md",
     "Tags"
   ]
 }
