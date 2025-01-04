@@ -51,11 +51,8 @@ menu:
   - title: Pwnable
     url: /pwn/
     submenu:
-      - title:             Study
-        url:               /study/
-        submenu:
-          - title: Heap
-            url: /heap/
+      - title: Study
+        url: /study/
       - title: Wargame
         url: /wargame/
   - title:             Documentation

@@ -186,19 +186,21 @@
   },
   "active": "96ea24d0592a2794",
   "lastOpenFiles": [
+    "_posts/pwnable/study/2024-06-24-Pwnable-glibc.md",
+    "_posts/pwnable/study/study.md",
+    "_posts/pwnable/study/heap/2024-06-24-Pwnable-glibc.md",
+    "_posts/pwnable/study/heap",
     "_featured_categories/Heap.md",
+    "_posts/pwnable/2024-06-24-Pwnable-glibc.md",
     "_featured_categories/pwn.md",
     "_featured_categories/study.md",
     "_featured_categories/about.md",
-    "_posts/pwnable/study/study.md",
     "posts.md",
     "_featured_categories/wargame.md",
     "CHANGELOG.md",
     "_posts/pwnable/wargame/2024-06-21-Pwnable-glibc.md",
     "_posts/pwnable/wargame",
-    "_posts/pwnable/study/heap/2024-06-24-Pwnable-glibc.md",
     "_posts/pwnable/study/heap/2024-06-21-Pwnable-glibc.md",
-    "_posts/pwnable/study/heap",
     "_posts/pwnable/study",
     "_posts/pwnable",
     "_posts/study/heap/2024-06-24-Pwnable-glibc.md",
@@ -219,8 +221,6 @@
     "docs/scripts.md",
     "docs/upgrade.md",
     "Template/template.md",
-    "404.md",
-    "about.md",
-    "NOTICE.md"
+    "404.md"
   ]
 }
