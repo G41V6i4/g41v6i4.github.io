@@ -8,7 +8,7 @@ hide_last_modified: true
 
 <details> 
 <summary>전체 코드</summary>
-~~~c
+<pre><code class="language-c">
 _int_malloc (mstate av, size_t bytes)
 {
   INTERNAL_SIZE_T nb;               /* normalized request size */
@@ -637,7 +637,7 @@ _int_malloc (mstate av, size_t bytes)
         }
     }
 }
-~~~
+</code></pre>
 </details>
 
 _int_malloc 함수에서 bin들을 사용해서 할당하는 루틴을 가지고 있는데
@@ -648,6 +648,7 @@ fastbin/smallbin/unsortedbin/largebin 을 사용한다.
 
 ### Prologue
 
+```c
 /* There are no usable arenas.  Fall back to sysmalloc to get a chunk from
      mmap.  */
   if (__glibc_unlikely (av == NULL))
@@ -657,19 +658,20 @@ fastbin/smallbin/unsortedbin/largebin 을 사용한다.
 	alloc_perturb (p, bytes);
       return p;
     }
-
+```
 - av 즉 arena를 가져오지 못했다면 sysmalloc으로 메모리를 할당해준다.
 
 ---
 
 ### fastbin 루틴
-
+```c
 if ((unsigned long) (nb) <= (unsigned long) (get_max_fast ()))
     {
       idx = fastbin_index (nb);
       mfastbinptr *fb = &fastbin (av, idx);
       mchunkptr pp;
       victim = *fb;
+```
 
   
 
@@ -678,25 +680,25 @@ if ((unsigned long) (nb) <= (unsigned long) (get_max_fast ()))
 - fb에 index를 통해 구한 fastbin주소를 저장한다.
 - pp : 청크포인터
 - victim을 fb(fastbin[idx])로 정한다.
-
+```c
       if (victim != NULL)
 	{
 	  if (SINGLE_THREAD_P)
 	    *fb = victim->fd;
 	  else
 	    REMOVE_FB (fb, pp, victim);
-
+```
 - 값을 가져왔을 때 실행이 된다.
 - 단일 스레드이면 fb를 victim->fd로 정한다. 즉 fastbin[idx]의 fd값으로 정하는 것이다.
 - 단일 스레드가 아니라면 fastbin을 초기화하는 REMOVE_FB 매크로를 실행한다.
-
+```c
 	if (__glibc_likely (victim != NULL))
 	    {
 	      size_t victim_idx = fastbin_index (chunksize (victim));
 	      if (__builtin_expect (victim_idx != idx, 0))
 		malloc_printerr ("malloc(): memory corruption (fast)");
 	      check_remalloced_chunk (av, victim, nb);
-
+```
 - victim이 NULL이 아닐 때 실행된다.
 - 크기가 맞는 idx를 victim_idx에 저장한다.
 - 이때 victim_idx와 idx가 맞지 않는다면 error를 일으킨다.
@@ -716,7 +718,7 @@ csize2tidx로 인덱스를 가져온 후 tc_idx에 저장한다.
 	if (tcache && tc_idx < mp_.tcache_bins)
 
  tcache가 존재하고 tc_idx가 정상적일 때 tcache 루틴이 실행된다.
-
+```c
 		  mchunkptr tc_victim;
 
 		  /* While bin not empty and tcache not full, copy chunks.  */
@@ -734,34 +736,34 @@ csize2tidx로 인덱스를 가져온 후 tc_idx에 저장한다.
 		      tcache_put (tc_victim, tc_idx);
 		    }
 		}
-
+```
 - tc_victim이라는 청크 포인터를 선언한다.
 - tcache 가득차거나 bin이 비어있을 때까지 다른 청크를 tcache에 넣는 것을 반복한다
 
 ---
 
 ### End of fastbin
-
+```c
 	      void *p = chunk2mem (victim);
 	      alloc_perturb (p, bytes);
 	      return p;
-
+```
 p에 fastbin[idx]의 포인터를 만들어 저장하고 p를 반환한다.
 
 ---
 
 ## smallbin 루틴
-
+```c
 if (in_smallbin_range (nb))
     {
       idx = smallbin_index (nb);
       bin = bin_at (av, idx);
-
+```
 요청한 사이즈가 smallbin의 범위 ( < 0x200)안에 있다면 실행되는 루틴이다.
 
 - idx : 요청 크기에 따른 인덱
 - bin : idx에 따른 bin의 주소
-
+```c
 	if ((victim = last (bin)) != bin)
         {
           bck = victim->bk;
@@ -774,7 +776,7 @@ if (in_smallbin_range (nb))
           if (av != &main_arena)
 	    set_non_main_arena (victim);
           check_malloced_chunk (av, victim, nb);
-
+```
 victim을 bin->bk로 정한 후 bk가 bin과 일치한지 확인한다.
 
 - bck : bin->bk->bk
@@ -786,7 +788,7 @@ victim을 bin->bk로 정한 후 bk가 bin과 일치한지 확인한다.
 ---
 
 ### smallbin with Tcache
-
+```c
 #if USE_TCACHE
 	  /* While we're here, if we see other chunks of the same size,
 	     stash them in the tcache.  */
@@ -812,31 +814,31 @@ victim을 bin->bk로 정한 후 bk가 bin과 일치한지 확인한다.
 		}
 	    }
 #endif
-
+```
 - fastbin과 같이 tcache가 다 차거나 smallbin이 없을 때까지 tcache에 넣는다.
 
 ---
 
 ### End of small bin
-
+```c
           void *p = chunk2mem (victim);
           alloc_perturb (p, bytes);
           return p;
         }
     }
-
+```
 p 에 재할당될 청크 주소를 저장한 후 반환한다.
 
 ---
 
 ## large bin 루틴
-
+```c
   else
     {
       idx = largebin_index (nb);
       if (atomic_load_relaxed (&av->have_fastchunks))
         malloc_consolidate (av);
     }
-
+```
 - idx에 nb에 해당하는 인덱스를 구한다.
 - fastbin이 존재하면 이를 병합하는 매크로를 실행한다.
