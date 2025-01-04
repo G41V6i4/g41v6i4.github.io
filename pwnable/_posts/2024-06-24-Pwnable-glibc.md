@@ -2,6 +2,9 @@
 layout: post
 title: "[glibc2.29]_int_malloc"
 description: Analysis _int_malloc in glibc2.29
+categories: 
+  - study
+  - Heap
 sitemap: false
 hide_last_modified: true
 ---

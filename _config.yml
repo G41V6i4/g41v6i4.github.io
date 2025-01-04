@@ -50,6 +50,11 @@ G41V6!4:
 menu:
   - title:             Study
     url:               /study/
+    submenu:
+      - title: Heap
+      - url: /heap/
+      - title: wargame
+      - url: /wargame/
   - title:             Documentation
     url:               /docs/
   - title:             About
