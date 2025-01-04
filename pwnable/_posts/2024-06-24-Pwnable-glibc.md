@@ -8,7 +8,8 @@ hide_last_modified: true
 
 <details> 
 <summary>전체 코드</summary>
-~~~_int_malloc (mstate av, size_t bytes)
+~~~c
+_int_malloc (mstate av, size_t bytes)
 {
   INTERNAL_SIZE_T nb;               /* normalized request size */
   unsigned int idx;                 /* associated bin index */
