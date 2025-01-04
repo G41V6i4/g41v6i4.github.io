@@ -8,8 +8,7 @@ hide_last_modified: true
 
 <details> 
 <summary>전체 코드</summary>
-```
-_int_malloc (mstate av, size_t bytes)
+~~~_int_malloc (mstate av, size_t bytes)
 {
   INTERNAL_SIZE_T nb;               /* normalized request size */
   unsigned int idx;                 /* associated bin index */
@@ -637,7 +636,7 @@ _int_malloc (mstate av, size_t bytes)
         }
     }
 }
-```
+~~~
 </details>
 
 _int_malloc 함수에서 bin들을 사용해서 할당하는 루틴을 가지고 있는데
