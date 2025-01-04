@@ -186,6 +186,8 @@
   },
   "active": "96ea24d0592a2794",
   "lastOpenFiles": [
+    "assets/img/logo.png",
+    "assets/img/스크린샷 2025-01-04 155441.png",
     "_posts/pwnable/study/2024-06-24-Pwnable-glibc.md",
     "_posts/pwnable/study/study.md",
     "_posts/pwnable/study/heap/2024-06-24-Pwnable-glibc.md",
@@ -220,7 +222,6 @@
     "docs/README.md",
     "docs/scripts.md",
     "docs/upgrade.md",
-    "Template/template.md",
-    "404.md"
+    "Template/template.md"
   ]
 }
